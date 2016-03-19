@@ -11,9 +11,8 @@ function Start () {
 }
 
 function Update () {
-	var translation : float = Input.GetAxis ("Horizontal") * speed;
+	var translation : float = Input.GetAxis ("Horizontal") * speed * Time.deltaTime;
 	var pos:Vector3;
-	translation *= Time.deltaTime;
 	transform.Translate (translation, 0, 0);
 	if (transform.position.x > xLimit) {
 		pos = transform.position;

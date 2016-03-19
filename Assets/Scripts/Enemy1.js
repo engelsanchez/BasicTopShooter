@@ -11,7 +11,9 @@ function Start () {
 function Update () {
 	transform.Translate(0, -speed * Time.deltaTime, 0);
 	transform.Rotate(0, angularSpeed * Time.deltaTime, 0);
-	if (transform.position.y < yMin) {
-		Destroy(gameObject);
-	}
+}
+
+
+function OnTriggerEnter() {
+	Destroy(gameObject);
 }
